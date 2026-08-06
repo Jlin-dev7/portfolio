@@ -269,5 +269,22 @@
   </div>
 </section>
 
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+
+  // Ouvre et ferme le menu lors du clic sur les trois traits
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+
+  // Ferme automatiquement le menu lorsqu'on clique sur un lien du menu
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+    });
+  });
+</script>
+
 </body>
 </html>
